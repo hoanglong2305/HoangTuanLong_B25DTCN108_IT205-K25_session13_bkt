@@ -14,10 +14,9 @@ while True:
     choose = input('nhập lựa chọn của bạn: ')
     match choose:
         case '1':
-            id = 0
             is_check = True
             while True:
-                id += 1
+                id = input('nhập id: ')
                 type_vehicle = input('Vui lòng nhập loại xe: ')
                 
                 if type_vehicle == '':
@@ -55,6 +54,7 @@ while True:
                 if id_input_delete == delete_vehicle["id"]:
                     vehicle_list.remove(delete_vehicle)
                     is_found = True
+                    print('xóa thành công')
                     break
                 if is_found == False:
                     print('không tìm thấy để xóa')
